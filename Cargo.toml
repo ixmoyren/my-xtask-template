@@ -1,0 +1,14 @@
+[workspace]
+resolver = "3"
+members = ["xtask"]
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+
+[package]
+name = "{{project-name}}"
+version = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]

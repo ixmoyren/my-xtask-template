@@ -1,0 +1,16 @@
+[package]
+name = "xtask"
+version = { workspace = true }
+edition = { workspace = true }
+publish = false
+
+[dependencies]
+anyhow = { version = "1", features = ["backtrace"] }
+async-io = "2"
+async-process = "2"
+clap = { version = "4", features = ["derive"] }
+futures-lite = "2"
+
+[[bin]]
+name = "xtask"
+path = "main.rs"
