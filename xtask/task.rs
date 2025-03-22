@@ -1,8 +1,7 @@
 use anyhow::Context;
 use async_process::Command;
 use futures_lite::{io::BufReader, prelude::*};
-use std::ffi::OsStr;
-use std::process::Stdio;
+use std::{ffi::OsStr, process::Stdio};
 
 pub async fn build(release: bool) -> anyhow::Result<()> {
     let args = if release {
