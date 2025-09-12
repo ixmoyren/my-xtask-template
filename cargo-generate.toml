@@ -1,0 +1,2 @@
+[placeholders]
+rust_toolchain_channel = { prompt = "Enter your rust toolchain channel", choices = ["nightly", "beta", "stable"], default = "nightly", type = "string" }

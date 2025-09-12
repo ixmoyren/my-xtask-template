@@ -1,2 +1,2 @@
 [toolchain]
-channel = "nightly"
+channel = "{{rust_toolchain_channel}}"
