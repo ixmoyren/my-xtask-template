@@ -7,10 +7,15 @@ publish = false
 
 [dependencies]
 anyhow = { version = "1", features = ["backtrace"] }
+clap = { version = "4", features = ["derive"] }
+{% if xtask_runtime == "smol" -%}
 async-io = "2"
 async-process = "2"
-clap = { version = "4", features = ["derive"] }
 futures-lite = "2"
+{%- endif %}
+{%- if xtask_runtime == "tokio" -%}
+tokio = { version = "1", features = ["full"] }
+{%- endif %}
 
 [[bin]]
 name = "xtask"

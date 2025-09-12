@@ -1,10 +1,15 @@
-[placeholders]
-rust_toolchain_channel = { prompt = "Enter your rust toolchain channel", choices = ["nightly", "beta", "stable"], default = "nightly", type = "string" }
-
 [template]
 ignore = [ 
   ".idea",
+  "Cargo.lock"
 ]
+
+[hooks]
+pre = ["conditional-xtask-runtime.rhai"]
+
+[placeholders]
+rust_toolchain_channel = { prompt = "Enter your rust toolchain channel", choices = ["nightly", "beta", "stable"], default = "nightly", type = "string" }
+xtask_runtime = {prompt = "Enter your xtask runtime", choices = ["tokio", "smol", "sync"], default = "smol", type = "string"}
 
 [conditional.'crate_type == "lib"']
 ignore = [ "src/main.rs" ]
