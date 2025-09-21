@@ -1,5 +1,7 @@
+{% if rust_toolchain_channel == "nightly" -%}
 [unstable]
 trim-paths = true
 
+{% endif -%}
 [alias]
 xtask = "run -q --manifest-path ./xtask/Cargo.toml --"

@@ -1,3 +1,5 @@
+{% if rust_toolchain_channel == "nightly" -%}
 unstable_features = true
 
 imports_granularity = "Crate"
+{%- endif %}
